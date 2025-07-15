@@ -454,13 +454,10 @@ ul.navbar-nav {
     display: flex;
     flex-direction: column;
     padding: 8.5% 0 8%;
-    max-width: 780px;
-    font-family: Nunito, -apple-system, BlinkMacSystemFont, SegoeUI, Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.4;
     tab-size: 3;
-    font-feature-settings: "liga";
-    text-decoration-skip-ink: auto;
     box-sizing: inherit;
+    max-width: 780px;
 }
 
 /* ===== Стили для половин блока ===== */
@@ -560,24 +557,26 @@ ul.navbar-nav {
 }
 
 /* ===== Фоновая графика ===== */
-.choose-variant:after {
-    width: 2000px;
-    height: 927px;
-    position: absolute;
-    content: "";
-    right: 0;
-    bottom: 0;
-    background: transparent url('../images/choose-variant-bg.png');
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    transform-origin: 45% 110%;
-    transition: background-position .6s;
-    transform: translate(50%) rotate(-45deg);
-    background-size: cover;
-    animation-duration: .4s;
-    animation-delay: .5s;
-    filter: drop-shadow(0px -10px 10px #00000080);
-    animation-iteration-count: 1;
+@media screen and (min-width: 1024px) {
+    .choose-variant:after {
+        width: 2000px;
+        height: 927px;
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 0;
+        background: transparent url('../images/choose-variant-bg.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        transform-origin: 45% 110%;
+        transition: background-position .6s;
+        transform: translate(50%) rotate(-45deg);
+        background-size: cover;
+        animation-duration: .4s;
+        animation-delay: .5s;
+        filter: drop-shadow(0px -10px 10px #00000080);
+        animation-iteration-count: 1;
+    }
 }
 
 .choose-variant.bg-up:after {
@@ -688,6 +687,10 @@ ul.navbar-nav {
     .section.-choose-variant:after {
         width: 1450px;
         height: 700px;
+    }
+
+    .choose-variant__halve {
+        flex-direction: column;
     }
 }
 
@@ -800,6 +803,14 @@ ul.navbar-nav {
 
     .feedback-form__fields {
         display: block;
+    }
+
+    .choose-variant {
+        padding: 1.5rem;
+    }
+
+    .web-variant {
+        width:100%;
     }
 }
 
